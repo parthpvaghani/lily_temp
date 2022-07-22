@@ -52,14 +52,14 @@ const Header = (props) => {
       w="100%"
       // mb={8}
       p={8}
-      bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
+      // bg={["primary.500", "primary.500", "transparent", "transparent"]}
+      // color={["white", "white", "primary.700", "primary.700"]}
       {...props}
     >
       <Flex align="center">
         <Logo
           w="100px"
-          color={["white", "white", "primary.500", "primary.500"]}
+          //color={["white", "white", "primary.500", "primary.500"]}
         />
       </Flex>
 
