@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Logo from "../ui/Logo";
 import {ColorModeSwitcher} from '../../ColorModeSwitcher'
+
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
     <Text
@@ -76,10 +77,10 @@ const Header = (props) => {
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
         >
-          <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/how">How It works </MenuItem>
+          <MenuItem to="/">Home </MenuItem>
+          <MenuItem to="/about">About </MenuItem>
           <MenuItem to="/faetures">Features </MenuItem>
-          <MenuItem to="/pricing">Pricing </MenuItem>
+          <MenuItem to="/wordBank">Banque de mots </MenuItem>
           <MenuItem to="/signup" isLast>
           <ColorModeSwitcher/>
           </MenuItem>
