@@ -50,7 +50,7 @@ const Header = (props) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
+      // mb={8}
       p={8}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
       color={["white", "white", "primary.700", "primary.700"]}
@@ -81,7 +81,7 @@ const Header = (props) => {
           <MenuItem to="/about">About </MenuItem>
           <MenuItem to="/faetures">Features </MenuItem>
           <MenuItem to="/wordBank">Banque de mots </MenuItem>
-          <MenuItem to="/signup" isLast>
+          <MenuItem to="" isLast>
           <ColorModeSwitcher/>
           </MenuItem>
         </Flex>

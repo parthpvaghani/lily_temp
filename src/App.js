@@ -5,8 +5,8 @@ import {
 } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import customTheme from "./utils/theme";
-import Header from './components/sections/Header';
 import Landing from './pages/Landing';
+import WordBank from './pages/WordBank';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
             <Route path="/" element={<Landing/>} />
             <Route path="/about" element={<Landing/>} />
             <Route path="/faetures" element={<Landing/>} />
-            <Route path="/wordBank" element={<Landing/>} />
+            <Route path="/wordBank" element={<WordBank/>} />
           </Routes>
         </BrowserRouter>
       </Box>
