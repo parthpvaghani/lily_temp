@@ -8,7 +8,7 @@ import WordBank from './pages/WordBank';
 function App() {
   return (
     <ChakraProvider theme={customTheme}>
-      <Box textAlign="center" fontSize="xl">
+      <Box textAlign="center" fontSize='lg'>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<AppLayout />}>
