@@ -12,16 +12,14 @@ import {
   Stack,
   Radio,
 } from '@chakra-ui/react';
-import LandingLayout from '../components/layouts/LandingLayout';
 import { SearchIcon } from '@chakra-ui/icons'
 
 
-export default function wordBank() {
+export default function WordBank() {
   return (
-    <LandingLayout>
       <Tabs variant="soft-rounded" colorScheme="blue" w="100%">
         <Flex
-            as="Box"
+            
             justify="center"
             wrap="wrap"
         >
@@ -36,11 +34,10 @@ export default function wordBank() {
         <TabPanels>
           <TabPanel>
             <Flex
-                as="Box"
+                
                 align="center"
                 wrap="wrap"
             >
-                <p>Niveaux :</p>
                 <Box style={{flex:1}}>
                     <SearchIcon mr={4}/>
                     <span style={{fontWeight:'bold', fontSize:'24px'}}>Rechercher des mots </span>
@@ -48,7 +45,7 @@ export default function wordBank() {
             </Flex>
 
             <Flex
-                as="Box"
+                
                 align="center"
                 justify='space-around'
                 wrap="wrap"
@@ -67,6 +64,5 @@ export default function wordBank() {
           </TabPanel>
         </TabPanels>
       </Tabs>
-    </LandingLayout>
   );
 }

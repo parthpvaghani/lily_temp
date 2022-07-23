@@ -77,13 +77,11 @@ const Header = (props) => {
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
         >
-          <MenuItem to="/">Home </MenuItem>
+          <MenuItem to="/home">Home </MenuItem>
           <MenuItem to="/about">About </MenuItem>
           <MenuItem to="/faetures">Features </MenuItem>
-          <MenuItem to="/wordBank">Banque de mots </MenuItem>
-          <MenuItem to="" isLast>
+          <MenuItem to="/wordbank">Banque de mots </MenuItem>
           <ColorModeSwitcher/>
-          </MenuItem>
         </Flex>
       </Box>
     </Flex>
