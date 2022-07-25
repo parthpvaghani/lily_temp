@@ -9,9 +9,7 @@ import {
   Box,
   Flex,
   RadioGroup,
-  Stack,
   Radio,
-  StackDivider,
   HStack,
   Text,
   Input,
@@ -20,7 +18,6 @@ import {
   PinInputField,
   Button,
   SimpleGrid,
-  Divider,
 } from '@chakra-ui/react';
 import { SearchIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
 
