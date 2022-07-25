@@ -19,6 +19,8 @@ import {
   PinInput,
   PinInputField,
   Button,
+  SimpleGrid,
+  Divider,
 } from '@chakra-ui/react';
 import { SearchIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
 
@@ -27,12 +29,17 @@ export default function WordBank() {
     <Tabs variant="soft-rounded" colorScheme="gray" w="100%">
       <Flex justify="center" wrap="wrap">
         <TabList>
-          <Stack spacing={10} direction="row">
+        <Flex
+        align="center"
+        justify="center"
+        wrap="wrap"
+        m={3}
+        >
             <Tab>Rechercher des mots </Tab>
             <Tab>Mes listes de mots </Tab>
             <Tab>Suggérer des mots </Tab>
             <Tab>Pricing </Tab>
-          </Stack>
+          </Flex>
         </TabList>
       </Flex>
 
@@ -49,7 +56,8 @@ export default function WordBank() {
 
           <Flex align="center" justify="space-around" wrap="wrap" mt="3">
             <RadioGroup defaultValue="1" mt={4}>
-              <Stack spacing={10} direction="row">
+            <SimpleGrid columns={{sm:1,md:6}} spacing={5}>
+                <Text alignSelf={'center'}>Niveaux:</Text>
                 <Radio value="1">Radio 1</Radio>
                 <Radio value="2">Radio 2</Radio>
                 <Radio value="3">Radio 3</Radio>
@@ -66,19 +74,16 @@ export default function WordBank() {
                     Consulter la charte pédagogique
                   </Link>
                 </Flex>
-              </Stack>
+              </SimpleGrid>
             </RadioGroup>
           </Flex>
 
           <Text mt={8}>Critères : </Text>
-          <HStack
-            divider={<StackDivider borderColor="black" />}
-            align="stretch"
-            mt={3}
-            px={6}
-          >
-            <Box h="auto" w="33%">
-              <Box h="45px" bg="#EBECF0" pt="8px">
+
+
+            <SimpleGrid columns={{sm:1,md:3,lg:3}} spacing={25} mx={10}>
+            <Box h="auto" w={'100%'}>
+              <Box minH="45px" bg="#EBECF0" pt="8px">
                 Phonétiques
               </Box>
 
@@ -107,17 +112,17 @@ export default function WordBank() {
                 </Select>
               </Box>
             </Box>
-            <Box h="auto" w="33%">
-              <Box h="45px" bg="#EBECF0" pt="8px">
+            <Box h="auto" w={'100%'}>
+              <Box minH="45px" bg="#EBECF0" pt="8px">
                 Orthographiques
               </Box>
             </Box>
-            <Box h="auto" w="34%">
-              <Box h="45px" bg="#EBECF0" pt="8px">
+            <Box h="auto" w={'100%'}>
+              <Box minH="45px" bg="#EBECF0" pt="8px">
                 Sémantiques & grammaticaux
               </Box>
             </Box>
-          </HStack>
+            </SimpleGrid>
 
           <Text mt={12}>Forme du mot (Consonnes/Voyelles):</Text>
           <Flex justifyContent={'center'} mt={3}>
