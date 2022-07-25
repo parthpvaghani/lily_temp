@@ -18,6 +18,7 @@ import {
   PinInputField,
   Button,
   SimpleGrid,
+  ButtonGroup,
 } from '@chakra-ui/react';
 import { SearchIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
 
@@ -26,12 +27,7 @@ export default function WordBank() {
     <Tabs variant="soft-rounded" colorScheme="gray" w="100%">
       <Flex justify="center" wrap="wrap">
         <TabList>
-        <Flex
-        align="center"
-        justify="center"
-        wrap="wrap"
-        m={3}
-        >
+          <Flex align="center" justify="center" wrap="wrap" m={3}>
             <Tab>Rechercher des mots </Tab>
             <Tab>Mes listes de mots </Tab>
             <Tab>Suggérer des mots </Tab>
@@ -53,12 +49,25 @@ export default function WordBank() {
 
           <Flex align="center" justify="space-around" wrap="wrap" mt="3">
             <RadioGroup defaultValue="1" mt={4}>
-            <SimpleGrid columns={{sm:1,md:6}} spacing={5}>
-                <Text alignSelf={'center'}>Niveaux:</Text>
-                <Radio value="1">Radio 1</Radio>
-                <Radio value="2">Radio 2</Radio>
-                <Radio value="3">Radio 3</Radio>
-                <Radio value="4">Radio 4</Radio>
+              <SimpleGrid columns={{ sm: 1, md: 6 }} spacing={5}>
+                <Text alignSelf={'center'}>Niveaux: </Text>
+
+                <Radio value="1" borderColor={'gray.400'}>
+                  Niveau découverte{' '}
+                  <Text fontWeight={'bold'}>"Graine de lecteur" </Text>
+                </Radio>
+                <Radio value="2" borderColor={'gray.400'}>
+                  Niveau Débutant{' '}
+                  <Text fontWeight={'bold'}>"Pousse de lecteur" </Text>
+                </Radio>
+                <Radio value="3" borderColor={'gray.400'}>
+                  Niveau intermédiaire{' '}
+                  <Text fontWeight={'bold'}>"Lecteur en herbe" </Text>
+                </Radio>
+                <Radio value="4" borderColor={'gray.400'}>
+                  Niveau avance{' '}
+                  <Text fontWeight={'bold'}>"Lecteur en fieur" </Text>
+                </Radio>
                 <Flex flexDirection="column" alignItems="center">
                   <QuestionOutlineIcon />
                   <Link
@@ -75,16 +84,17 @@ export default function WordBank() {
             </RadioGroup>
           </Flex>
 
-          <Text mt={8}>Critères : </Text>
+          <Text mt={8} mb={2} fontSize="md">
+            Critères :{' '}
+          </Text>
 
-
-            <SimpleGrid columns={{sm:1,md:3,lg:3}} spacing={25} mx={10}>
+          <SimpleGrid columns={{ sm: 1, md: 3, lg: 3 }} spacing={45} mx={10}>
             <Box h="auto" w={'100%'}>
               <Box minH="45px" bg="#EBECF0" pt="8px">
                 Phonétiques
               </Box>
 
-              <Box textAlign="left">
+              <Box textAlign="left" fontSize="sm">
                 <Text mt={4}>Son d'attaque: </Text>
                 <Input borderColor={'gray.400'} mt={2} />
 
@@ -101,6 +111,7 @@ export default function WordBank() {
                   placeholder="Nombre de syllabes phonétiques"
                   borderColor={'gray.400'}
                   mt={7}
+                  fontSize="sm"
                 >
                   <option value="1">1 </option>
                   <option value="2">2 </option>
@@ -113,15 +124,125 @@ export default function WordBank() {
               <Box minH="45px" bg="#EBECF0" pt="8px">
                 Orthographiques
               </Box>
+
+              <Box textAlign="left" fontSize="sm">
+                <Text mt={4}>Commence par la/les lettre(s): </Text>
+                <Input borderColor={'gray.400'} mt={2} />
+
+                <HStack spacing={'4'}>
+                  <Flex flexDirection={'column'}>
+                    <Text mt={4}>Avec la/les lettre(s): </Text>
+                    <Input borderColor={'gray.400'} mt={2} />
+                  </Flex>
+                  <Flex flexDirection={'column'}>
+                    <Text mt={4}>Sans la/les lettre(s): </Text>
+                    <Input borderColor={'gray.400'} mt={2} />
+                  </Flex>
+                </HStack>
+
+                <HStack spacing={'4'}>
+                  <Flex flexDirection={'column'}>
+                    <Text mt={4}>Avec la suite de lettres: </Text>
+                    <Input borderColor={'gray.400'} mt={2} />
+                  </Flex>
+                  <Flex flexDirection={'column'}>
+                    <Text mt={4}>Sans la suite de lettres: </Text>
+                    <Input borderColor={'gray.400'} mt={2} />
+                  </Flex>
+                </HStack>
+
+                <Text mt={4}>Se termine par la/les lettre(s): </Text>
+                <Input borderColor={'gray.400'} mt={2} />
+
+                <Select
+                  placeholder="Nombre de syllabes orthographiques"
+                  borderColor={'gray.400'}
+                  mt={7}
+                  fontSize="sm"
+                >
+                  <option value="1">1 </option>
+                  <option value="2">2 </option>
+                </Select>
+              </Box>
             </Box>
             <Box h="auto" w={'100%'}>
               <Box minH="45px" bg="#EBECF0" pt="8px">
                 Sémantiques & grammaticaux
               </Box>
-            </Box>
-            </SimpleGrid>
 
-          <Text mt={12}>Forme du mot (Consonnes/Voyelles):</Text>
+              <Box textAlign="left" fontSize="sm">
+                <Text mt={5}>Nature de mots </Text>
+                <ButtonGroup gap="4" mt={1} w={'100%'}>
+                  <Button
+                    backgroundColor={'gray.600'}
+                    color={'white'}
+                    border="2px"
+                    minW={'125px'}
+                    fontSize="sm"
+                  >
+                    Nom commun
+                  </Button>
+                  <Button
+                    backgroundColor={'white'}
+                    color={'gray.600'}
+                    border="2px"
+                    minW={'125px'}
+                    fontSize="sm"
+                  >
+                    Autre
+                  </Button>
+                </ButtonGroup>
+
+                <Text mt={6}>Genre </Text>
+                <ButtonGroup gap="4" mt={1} w={'100%'}>
+                  <Button
+                    backgroundColor={'white'}
+                    color={'gray.600'}
+                    border="2px"
+                    minW={'125px'}
+                    fontSize="sm"
+                  >
+                    Masculin
+                  </Button>
+                  <Button
+                    backgroundColor={'white'}
+                    color={'gray.600'}
+                    border="2px"
+                    minW={'125px'}
+                    fontSize="sm"
+                  >
+                    Féminin
+                  </Button>
+                </ButtonGroup>
+
+                <Text mt={6}>Nombre </Text>
+                <ButtonGroup gap="4" mt={1} w={'100%'}>
+                  <Button
+                    backgroundColor={'white'}
+                    color={'gray.600'}
+                    border="2px"
+                    minW={'125px'}
+                    fontSize="sm"
+                  >
+                    Singulier
+                  </Button>
+                  <Button
+                    backgroundColor={'white'}
+                    color={'gray.600'}
+                    border="2px"
+                    minW={'125px'}
+                    fontSize="sm"
+                  >
+                    Pluriel
+                  </Button>
+                </ButtonGroup>
+              </Box>
+            </Box>
+          </SimpleGrid>
+
+          <Text mt={12} fontSize="md">
+            Forme du mot (Consonnes/Voyelles):
+          </Text>
           <Flex justifyContent={'center'} mt={3}>
             <HStack>
               <PinInput type="alphanumeric" otp>
@@ -140,7 +261,7 @@ export default function WordBank() {
               backgroundColor={'gray.600'}
               color={'white'}
               size="xs"
-              width={'7%'}
+              minW={'85px'}
               mx={4}
             >
               C
@@ -149,7 +270,7 @@ export default function WordBank() {
               backgroundColor={'gray.600'}
               color={'white'}
               size="xs"
-              width={'7%'}
+              minW={'85px'}
             >
               V
             </Button>
@@ -160,7 +281,8 @@ export default function WordBank() {
               placeholder="Nombre de lettres"
               borderColor={'gray.400'}
               mt={5}
-              width={'30%'}
+              w="30%"
+              fontSize="sm"
             >
               <option value="1">1 </option>
               <option value="2">2 </option>
