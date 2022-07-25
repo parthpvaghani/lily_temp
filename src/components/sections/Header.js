@@ -78,7 +78,7 @@ const Header = (props) => {
           justify={["center", "space-between", "flex-end", "flex-end"]}
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
-        ><MenuItem to="/home">Home </MenuItem>
+        ><MenuItem to="/">Home </MenuItem>
         <MenuItem to="/about">About </MenuItem>
         <MenuItem to="/faetures">Features </MenuItem>
         <MenuItem to="/wordbank">Banque de mots </MenuItem>

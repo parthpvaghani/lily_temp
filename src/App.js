@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import customTheme from './utils/theme';
 import AppLayout from './components/layouts/app-layout';
 import WordBank from './pages/WordBank';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<AppLayout />}>
+              <Route path={`/`} element={<Home />} />
               <Route path={`/wordbank`} element={<WordBank />} />
               <Route
                 path="*"
