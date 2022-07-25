@@ -10,6 +10,7 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
       mb={{ base: isLast ? 0 : 8, sm: 0 }}
       mr={{ base: 0, sm: isLast ? 0 : 8 }}
       display="block"
+      colorScheme={'gray'}
       {...rest}
     >
       <Link to={to}>{children}</Link>
@@ -50,13 +51,16 @@ const Header = (props) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      // mb={8}
+      mb={2}
       p={8}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
+      color={["white", "white", "gray", "gray"]}
       {...props}
     >
-      <Flex align="center">
+      <Flex align="center"
+      justify={["center", "space-between", "flex-end", "flex-end"]}
+      direction={["column", "row", "row", "row"]}
+      >
         <Logo
         />
       </Flex>
@@ -74,11 +78,11 @@ const Header = (props) => {
           justify={["center", "space-between", "flex-end", "flex-end"]}
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
-        >
-          <MenuItem to="/home">Home </MenuItem>
-          <MenuItem to="/about">About </MenuItem>
-          <MenuItem to="/faetures">Features </MenuItem>
-          <MenuItem to="/wordbank">Banque de mots </MenuItem>
+        ><MenuItem to="/home">Home </MenuItem>
+        <MenuItem to="/about">About </MenuItem>
+        <MenuItem to="/faetures">Features </MenuItem>
+        <MenuItem to="/wordbank">Banque de mots </MenuItem>
+          <Text>Search </Text>
           <ColorModeSwitcher/>
         </Flex>
       </Box>

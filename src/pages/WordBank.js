@@ -24,7 +24,7 @@ import { SearchIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
 
 export default function WordBank() {
   return (
-    <Tabs variant="soft-rounded" colorScheme="blue" w="100%">
+    <Tabs variant="soft-rounded" colorScheme="gray" w="100%">
       <Flex justify="center" wrap="wrap">
         <TabList>
           <Stack spacing={10} direction="row">
@@ -77,8 +77,8 @@ export default function WordBank() {
             mt={3}
             px={6}
           >
-            <Box h="auto" w="33%" px={1}>
-              <Box h="45px" bg="#E6E6FA" pt="8px">
+            <Box h="auto" w="33%">
+              <Box h="45px" bg="#EBECF0" pt="8px">
                 Phonétiques
               </Box>
 
@@ -107,15 +107,13 @@ export default function WordBank() {
                 </Select>
               </Box>
             </Box>
-
-            <Box h="auto" w="33%" px={1}>
-              <Box h="45px" bg="#E6E6FA" pt="8px">
+            <Box h="auto" w="33%">
+              <Box h="45px" bg="#EBECF0" pt="8px">
                 Orthographiques
               </Box>
             </Box>
-
-            <Box h="auto" w="34%" px={1}>
-              <Box h="45px" bg="#E6E6FA" pt="8px">
+            <Box h="auto" w="34%">
+              <Box h="45px" bg="#EBECF0" pt="8px">
                 Sémantiques & grammaticaux
               </Box>
             </Box>
