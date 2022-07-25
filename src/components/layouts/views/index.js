@@ -7,7 +7,7 @@ export const Views = () => {
   return (
     <Routes>
     <Route element={<AppLayout/>}>
-    <Route path="/wordbank" element={<WordBank/>}/>
+      <Route path="/wordbank" element={<WordBank/>}/>
     </Route>
     </Routes>
   )

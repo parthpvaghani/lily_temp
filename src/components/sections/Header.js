@@ -58,8 +58,6 @@ const Header = (props) => {
     >
       <Flex align="center">
         <Logo
-          w="100px"
-          //color={["white", "white", "primary.500", "primary.500"]}
         />
       </Flex>
 

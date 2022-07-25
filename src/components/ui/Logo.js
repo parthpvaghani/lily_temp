@@ -1,12 +1,11 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 
 export default function Logo(props) {
   return (
     <Box {...props}>
-      <Text fontSize="lg" fontWeight="bold">
-        Logo
-      </Text>
+       <Image src='LOGO-DSI-Horizontal.png' alt='DSI Logo' width={200}
+       />
     </Box>
   );
 }
