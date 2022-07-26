@@ -18,7 +18,7 @@ export default function Research() {
                 Résumé de la recherche
             </Text>
             </Flex>
-    </Box>
+        </Box>
     </>
   );
 }
