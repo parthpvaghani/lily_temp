@@ -48,33 +48,42 @@ export default function WordBank() {
           </Flex>
 
           <Flex align="center" justify="space-around" wrap="wrap" mt="3">
-            <RadioGroup defaultValue="1" mt={4}>
+            <RadioGroup defaultValue="1" mt={2}>
               <SimpleGrid columns={{ sm: 1, md: 6 }} spacing={5}>
                 <Text alignSelf={'center'}>Niveaux: </Text>
 
-                <Radio value="1" borderColor={'gray.400'}>
-                  Niveau découverte{' '}
-                  <Text fontWeight={'bold'}>"Graine de lecteur" </Text>
+                <Radio value="1" borderColor={'gray.400'} size="md">
+                  <Text fontSize={'sm'}>
+                    Niveau découverte{' '}
+                    <Text fontWeight={'bold'}>"Graine de lecteur" </Text>
+                  </Text>
                 </Radio>
                 <Radio value="2" borderColor={'gray.400'}>
-                  Niveau Débutant{' '}
-                  <Text fontWeight={'bold'}>"Pousse de lecteur" </Text>
+                  <Text fontSize={'sm'}>
+                    Niveau Débutant{' '}
+                    <Text fontWeight={'bold'}>"Pousse de lecteur" </Text>
+                  </Text>
                 </Radio>
                 <Radio value="3" borderColor={'gray.400'}>
-                  Niveau intermédiaire{' '}
-                  <Text fontWeight={'bold'}>"Lecteur en herbe" </Text>
+                  <Text fontSize={'sm'}>
+                    Niveau intermédiaire{' '}
+                    <Text fontWeight={'bold'}>"Lecteur en herbe" </Text>
+                  </Text>
                 </Radio>
                 <Radio value="4" borderColor={'gray.400'}>
-                  Niveau avance{' '}
-                  <Text fontWeight={'bold'}>"Lecteur en fieur" </Text>
+                  <Text fontSize={'sm'}>
+                    Niveau avance{' '}
+                    <Text fontWeight={'bold'}>"Lecteur en fieur" </Text>
+                  </Text>
                 </Radio>
                 <Flex flexDirection="column" alignItems="center">
-                  <QuestionOutlineIcon />
+                  <QuestionOutlineIcon mb={2}/>
                   <Link
                     to={''}
                     style={{
                       color: '#3BB9FF',
                       textDecorationLine: 'underline',
+                      fontSize:'15px'
                     }}
                   >
                     Consulter la charte pédagogique
@@ -96,16 +105,16 @@ export default function WordBank() {
 
               <Box textAlign="left" fontSize="sm">
                 <Text mt={4}>Son d'attaque: </Text>
-                <Input borderColor={'gray.400'} mt={2} />
+                <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
 
                 <Text mt={4}>Avec le(s) son(s): </Text>
-                <Input borderColor={'gray.400'} mt={2} />
+                <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
 
                 <Text mt={4}>Sans le(s) son(S): </Text>
-                <Input borderColor={'gray.400'} mt={2} />
+                <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
 
                 <Text mt={4}>Rime avec: </Text>
-                <Input borderColor={'gray.400'} mt={2} />
+                <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
 
                 <Select
                   placeholder="Nombre de syllabes phonétiques"
@@ -127,32 +136,32 @@ export default function WordBank() {
 
               <Box textAlign="left" fontSize="sm">
                 <Text mt={4}>Commence par la/les lettre(s): </Text>
-                <Input borderColor={'gray.400'} mt={2} />
+                <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
 
                 <HStack spacing={'4'}>
                   <Flex flexDirection={'column'}>
                     <Text mt={4}>Avec la/les lettre(s): </Text>
-                    <Input borderColor={'gray.400'} mt={2} />
+                    <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
                   </Flex>
                   <Flex flexDirection={'column'}>
                     <Text mt={4}>Sans la/les lettre(s): </Text>
-                    <Input borderColor={'gray.400'} mt={2} />
+                    <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
                   </Flex>
                 </HStack>
 
                 <HStack spacing={'4'}>
                   <Flex flexDirection={'column'}>
                     <Text mt={4}>Avec la suite de lettres: </Text>
-                    <Input borderColor={'gray.400'} mt={2} />
+                    <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
                   </Flex>
                   <Flex flexDirection={'column'}>
                     <Text mt={4}>Sans la suite de lettres: </Text>
-                    <Input borderColor={'gray.400'} mt={2} />
+                    <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
                   </Flex>
                 </HStack>
 
                 <Text mt={4}>Se termine par la/les lettre(s): </Text>
-                <Input borderColor={'gray.400'} mt={2} />
+                <Input borderColor={'gray.400'} mt={2} fontSize="sm" />
 
                 <Select
                   placeholder="Nombre de syllabes orthographiques"
@@ -236,6 +245,11 @@ export default function WordBank() {
                     Pluriel
                   </Button>
                 </ButtonGroup>
+
+                <Text mt="8">Thème(s)</Text>
+                <Text mt="6" fontSize={'lg'} pl="10">
+                  pas de thèmes pour le moment à intégrer plus tard
+                </Text>
               </Box>
             </Box>
           </SimpleGrid>
@@ -281,7 +295,7 @@ export default function WordBank() {
               placeholder="Nombre de lettres"
               borderColor={'gray.400'}
               mt={5}
-              w="30%"
+              w="290px"
               fontSize="sm"
             >
               <option value="1">1 </option>
