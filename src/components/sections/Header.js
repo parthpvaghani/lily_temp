@@ -51,8 +51,8 @@ const Header = (props) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={2}
-      p={8}
+      py={4}
+      px={8}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
       color={["white", "white", "gray", "gray"]}
       {...props}
@@ -81,7 +81,7 @@ const Header = (props) => {
         ><MenuItem to="/">Home </MenuItem>
         <MenuItem to="/about">About </MenuItem>
         <MenuItem to="/faetures">Features </MenuItem>
-        <MenuItem to="/wordbank">Banque de mots </MenuItem>
+        <MenuItem to="/wordBankTabs">Banque de mots </MenuItem>
           <Text>Search </Text>
           <ColorModeSwitcher/>
         </Flex>

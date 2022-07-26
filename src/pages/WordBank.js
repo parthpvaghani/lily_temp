@@ -1,11 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
   Box,
   Flex,
   RadioGroup,
@@ -23,21 +18,10 @@ import {
 import { SearchIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
 
 export default function WordBank() {
-  return (
-    <Tabs variant="soft-rounded" colorScheme="gray" w="100%">
-      <Flex justify="center" wrap="wrap">
-        <TabList>
-          <Flex align="center" justify="center" wrap="wrap" m={3}>
-            <Tab>Rechercher des mots </Tab>
-            <Tab>Mes listes de mots </Tab>
-            <Tab>Suggérer des mots </Tab>
-            <Tab>Pricing </Tab>
-          </Flex>
-        </TabList>
-      </Flex>
+  const navigate = useNavigate();
 
-      <TabPanels>
-        <TabPanel>
+  return (
+        <>
           <Flex align="center" wrap="wrap">
             <Box style={{ flex: 1 }}>
               <SearchIcon mr={4} />
@@ -60,7 +44,7 @@ export default function WordBank() {
                 </Radio>
                 <Radio value="2" borderColor={'gray.400'}>
                   <Text fontSize={'sm'}>
-                    Niveau Débutant{' '}
+                    Niveau débutant{' '}
                     <Text fontWeight={'bold'}>"Pousse de lecteur" </Text>
                   </Text>
                 </Radio>
@@ -77,13 +61,13 @@ export default function WordBank() {
                   </Text>
                 </Radio>
                 <Flex flexDirection="column" alignItems="center">
-                  <QuestionOutlineIcon mb={2}/>
+                  <QuestionOutlineIcon mb={2} />
                   <Link
                     to={''}
                     style={{
                       color: '#3BB9FF',
                       textDecorationLine: 'underline',
-                      fontSize:'15px'
+                      fontSize: '15px',
                     }}
                   >
                     Consulter la charte pédagogique
@@ -305,11 +289,15 @@ export default function WordBank() {
             </Select>
           </Flex>
 
-          <Button backgroundColor={'gray.600'} color={'white'} mt={7} mb={10}>
+          <Button
+            backgroundColor={'gray.600'}
+            color={'white'}
+            mt={7}
+            mb={10}
+            onClick={() => navigate('/research')}
+          >
             Rechercher
           </Button>
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
+       </>
   );
 }
