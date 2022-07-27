@@ -1,8 +1,9 @@
-import { CalendarIcon, SearchIcon } from '@chakra-ui/icons';
+import { SearchIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
   Flex,
+  Icon,
   Select,
   Table,
   TableContainer,
@@ -14,7 +15,8 @@ import {
   Tr,
 } from '@chakra-ui/react';
 import React from 'react';
-
+import {BsBox} from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 export default function Research() {
   return (
     <>
@@ -38,7 +40,7 @@ export default function Research() {
               <Text fontSize={'xl'} fontWeight="bold">
                 18 résultats{' '}
               </Text>
-              <CalendarIcon w={8} h={8} ml="8" />
+              <Icon as={BsBox} w={8} h={8} ml="8"/>
               <Text fontSize="md" w="40%">
                 Ces mots nécessitent une personnalisation de cubes
               </Text>
@@ -80,34 +82,36 @@ export default function Research() {
             </Thead>
             <Tbody>
               <Tr>
-                <Td>Abeille</Td>
+                <Td style={{display:'flex',alignItems:'center'}} fontSize={'20px'}>Abeille <Icon as={BsBox} w={6} h={6} ml="2"/></Td>
                 <Td>Élevée</Td>
-                <Td>Insectes</Td>
-                <Td>+</Td>
+                <Td style={{display:'flex',alignItems:'center'}}><Link to={''} style={{color:'blue', textDecoration:'underline'}}>Insectes</Link></Td>
+                <Td textAlign={'center'}>+</Td>
               </Tr>
               <Tr>
-                <Td>Arbre</Td>
+                <Td style={{display:'flex',alignItems:'center'}} fontSize={'20px'}>Arbre <Icon as={BsBox} w={6} h={6} ml="2"/></Td>
                 <Td>Élevée</Td>
-                <Td></Td>
-                <Td>+</Td>
+                <Td><Link to={''} style={{color:'blue', textDecoration:'underline'}}>Insectes</Link></Td>
+                <Td textAlign={'center'}>+</Td>
               </Tr>
               <Tr>
-                <Td>Balustrade</Td>
+              <Td style={{display:'flex',alignItems:'center'}} fontSize={'20px'}>Balustrade
+              <Icon as={BsBox} w={6} h={6} ml="2"/>
+                </Td>
                 <Td>Faible</Td>
-                <Td></Td>
-                <Td>+</Td>
+                <Td style={{display:'flex',alignItems:'center'}}><Link to={''} style={{color:'blue', textDecoration:'underline'}}>Insectes</Link></Td>
+                <Td textAlign={'center'}>+</Td>
               </Tr>
               <Tr>
-                <Td>Brique</Td>
+                <Td style={{display:'flex',alignItems:'center'}} fontSize={'20px'}>Brique <Icon as={BsBox} w={6} h={6} ml="2"/></Td>
                 <Td>Moyenne</Td>
-                <Td></Td>
-                <Td>+</Td>
+                <Td style={{display:'flex',alignItems:'center'}}><Link to={''} style={{color:'blue', textDecoration:'underline'}}>Insectes</Link></Td>
+                <Td textAlign={'center'}>+</Td>
               </Tr>
               <Tr>
-                <Td>Mur</Td>
+                <Td style={{display:'flex',alignItems:'center'}} fontSize={'20px'}>Mur <Icon as={BsBox} w={6} h={6} ml="2"/></Td>
                 <Td>Élevée</Td>
-                <Td>Pack de base</Td>
-                <Td>+</Td>
+                <Td style={{display:'flex',alignItems:'center'}}><Link to={''} style={{color:'blue', textDecoration:'underline'}}>Pack de base</Link></Td>
+                <Td textAlign={'center'}>+</Td>
               </Tr>
             </Tbody>
           </Table>
