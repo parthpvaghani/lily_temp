@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Tabs,
   TabList,
@@ -7,12 +7,9 @@ import {
   TabPanel,
   Flex,
 } from '@chakra-ui/react';
-import WordBank from './WordBank';
-import Research from './Research';
+import SearchWords from './SearchWords';
 
-export default function WordBankTabs() {
-  const [activeStep, setActiveStep] = useState(1);
-
+export default function WordBank() {
   return (
     <Tabs variant="soft-rounded" colorScheme="gray" w="100%">
       <Flex justify="center" wrap="wrap">
@@ -28,9 +25,7 @@ export default function WordBankTabs() {
 
       <TabPanels>
         <TabPanel>
-            {
-                activeStep === 1 ? <WordBank/> : <Research/>
-            }
+            <SearchWords />
         </TabPanel>
       </TabPanels>
     </Tabs>

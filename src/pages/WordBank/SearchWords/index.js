@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Flex,
@@ -16,11 +16,14 @@ import {
   ButtonGroup,
 } from '@chakra-ui/react';
 import { SearchIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
+import Research from './Research';
 
-export default function WordBank() {
-  const navigate = useNavigate();
+export default function SearchWords() {
+  const [activeStep, setActiveStep] = useState(1);
 
   return (
+    <>
+      {activeStep === 1 && (
         <>
           <Flex align="center" wrap="wrap">
             <Box style={{ flex: 1 }}>
@@ -294,10 +297,16 @@ export default function WordBank() {
             color={'white'}
             mt={7}
             mb={10}
-            onClick={() => navigate('/research')}
+            onClick={() => setActiveStep(2)}
           >
             Rechercher
           </Button>
-       </>
+        </>
+      )}
+
+      {
+        activeStep === 2 && <Research/>
+      }
+    </>
   );
 }

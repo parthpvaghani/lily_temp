@@ -81,7 +81,7 @@ const Header = (props) => {
         ><MenuItem to="/">Home </MenuItem>
         <MenuItem to="/about">About </MenuItem>
         <MenuItem to="/faetures">Features </MenuItem>
-        <MenuItem to="/wordBankTabs">Banque de mots </MenuItem>
+        <MenuItem to="/wordBank">Banque de mots </MenuItem>
           <Text>Search </Text>
           <ColorModeSwitcher/>
         </Flex>
